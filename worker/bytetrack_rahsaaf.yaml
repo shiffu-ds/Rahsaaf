@@ -1,0 +1,15 @@
+# ByteTrack settings for RahSaaf. Used by worker/detector.py.
+#
+# Two thresholds on purpose. A vehicle must be seen at 0.3 or better before it
+# is followed at all, so a weak detection never starts an alert. Once it is
+# being followed, detections down to 0.15 at the same place keep it followed.
+# Without the lower one, a parked vehicle that the model is only fairly sure
+# about (half out of view, or in shadow) drops in and out, and its parking
+# timer keeps restarting.
+tracker_type: bytetrack
+track_high_thresh: 0.3
+track_low_thresh: 0.15
+new_track_thresh: 0.3
+track_buffer: 30
+match_thresh: 0.8
+fuse_score: True

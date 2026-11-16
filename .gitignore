@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+
+# Model weights, footage and generated evidence are large and stay out of git.
+models/*
+!models/.gitkeep
+data/*
+!data/.gitkeep
+*.pt
+*.mp4
+*.avi
+
+# Personal editor settings
+.vscode/
